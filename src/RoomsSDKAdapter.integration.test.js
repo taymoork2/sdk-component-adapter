@@ -1,7 +1,10 @@
 import {from} from 'rxjs';
 import {delayWhen, skip} from 'rxjs/operators';
 
-import {createIntegrationTestUser, removeIntegrationTestUser} from './testHelper';
+import {
+  createIntegrationTestUser,
+  removeIntegrationTestUser,
+} from './testHelper';
 
 import WebexSDKAdapter from '.';
 

@@ -1,11 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import dotenv from 'dotenv';
-import {createTestUser, removeTestUser} from '@webex/test-users';
+// Used to get WEBEX_CLIENT_ID & WEBEX_CLIENT_SECRET for test user creation access
+import 'dotenv/config';
+
 import Webex from 'webex';
 import {constructHydraId} from '@webex/common';
-
-// Used to get WEBEX_CLIENT_ID & WEBEX_CLIENT_SECRET for test user creation access
-dotenv.config();
+import {createTestUser, removeTestUser} from '@webex/test-users';
 
 const URL_CONVO_SERVICE_INTEGRATION = 'https://conversation-intb.ciscospark.com/conversation/api/v1';
 const URL_ID_BROKER_INTEGRATION = 'https://idbrokerbts.webex.com';

@@ -1,7 +1,11 @@
 import {from} from 'rxjs';
 import {delayWhen, skip} from 'rxjs/operators';
 
-import {createIntegrationTestUser, removeIntegrationTestUser, getPersonHydraID} from './testHelper';
+import {
+  createIntegrationTestUser,
+  removeIntegrationTestUser,
+  getPersonHydraID,
+} from './testHelper';
 
 import WebexSDKAdapter from '.';
 
@@ -15,6 +19,7 @@ describe('People SDK Adapter', () => {
   // Since these are integration tests with live data,
   // increase the async "idle" timeout so jest doesn't error early.
   jest.setTimeout(30000);
+
   beforeAll(async () => {
     user = await createIntegrationTestUser();
     userID = getPersonHydraID(user.id);
